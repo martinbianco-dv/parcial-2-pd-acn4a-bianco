@@ -1,0 +1,161 @@
+:root {
+  --color-principal: #4f46e5;
+  --color-secundario: #f3f4f6;
+  --color-texto: #1f2937;
+  --color-fondo-tabla: #ffffff;
+  --color-fondo-fila: #f9fafb;
+  --color-fila-hover: #e5e7eb;
+  --color-completada: #e5e7eb;
+  --color-texto-completada: #6b7280;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--color-secundario);
+  color: var(--color-texto);
+  line-height: 1.5;
+  padding: 20px;
+}
+
+.container {
+  max-width: 650px;
+  margin: 0 auto;
+  background-color: var(--color-fondo-tabla);
+  padding: 3rem 2rem 2rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+}
+
+form input[type="text"] {
+  padding: 0.7rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border 0.2s;
+}
+
+form input[type="text"]:focus {
+  border-color: var(--color-principal);
+  outline: none;
+}
+
+form button[type="submit"] {
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--color-principal);
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+form button[type="submit"]:hover {
+  background-color: #4338ca;
+  transform: scale(1.02);
+}
+
+.mensaje-error {
+  color: #ef4444;
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+th, td {
+  padding: 14px 12px;
+  text-align: left;
+}
+
+th {
+  background-color: white;
+  color: var(--color-principal);
+  font-size: 1rem;
+  text-align: left;
+}
+
+tr:nth-child(even) {
+  background-color: var(--color-fondo-fila);
+}
+
+tr:nth-child(odd) {
+  background-color: var(--color-fondo-tabla);
+}
+
+tr:hover {
+  background-color: var(--color-fila-hover);
+}
+
+tr.completada {
+  background-color: var(--color-completada);
+  color: var(--color-texto-completada);
+}
+
+tr.completada td {
+  color: var(--color-texto-completada);
+}
+
+.icono {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  margin-right: 10px;
+  vertical-align: middle;
+  transition: transform 0.1s;
+}
+
+.icono:hover {
+  transform: scale(1.2);
+}
+
+.icono-completar {
+  fill: #22c55e;
+}
+
+.icono-deshacer {
+  fill: #fbbf24;
+}
+
+.icono-eliminar {
+  fill: #ef4444;
+}
+
+.espacio-fantasma {
+  height: 3rem;
+  visibility: hidden;
+  margin: 0;
+}
+
+footer {
+  text-align: center;
+  margin-top: 2rem;
+  color: #6b7280;
+  font-size: 0.9rem;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gestor de Tareas</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <h1 class="espacio-fantasma">&nbsp;</h1>
+
+  <main class="container">
+    <h1>Gestor de Tareas</h1>
+
+    <form id="task-form">
+      <input type="text" id="task-title" placeholder="Nombre" required />
+      <input type="text" id="task-desc" placeholder="Descripción" required />
+      <button type="submit">Agregar tarea</button>
+      <p id="mensaje-error" class="mensaje-error"></p>
+    </form>
+
+    <table id="task-table">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Descripción</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="task-list">
+      </tbody>
+    </table>
+  </main>
+
+  <footer>
+    <p>© 2025 Gestor de Tareas</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
